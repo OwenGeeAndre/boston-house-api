@@ -29,7 +29,7 @@ def read_root():
 @app.post("/predict")      # when a user sends a POST request to the /predict endpoint, run this function
 def predict_house_price(features: HouseFeatures):
     # step 5.1: convert the input data to a numpy array 
-    input_data = np.array([[features.CRIM, features.CHAS, features.NOX, features.RM, features.DIS, features.RAD, features.PTRATIO, features.LSTAT]])
+    input_data = np.array([[1.0, features.CRIM, features.CHAS, features.NOX, features.RM, features.DIS, features.RAD, features.PTRATIO, features.LSTAT]])
 
     # step 5.2: make the prediction using the loaded model
     log_price_prediction = model.predict(input_data)[0]   # the 0 returns the exact value rather than a list
