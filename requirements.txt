@@ -1,0 +1,11 @@
+# =======================================
+# FILE: requirements.txt
+# This file lists the dependencies for the project. Tells the cloud what python libraries to install when deploying the project.
+# =======================================
+
+fastapi
+uvicorn  # ASGI server for running FastAPI applications
+scikit-learn  # Machine learning library
+numpy
+pydantic
+joblib
